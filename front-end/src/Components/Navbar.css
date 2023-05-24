@@ -1,0 +1,145 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    padding: 10px;
+    background-color: #71b3ff;
+    color: #fff;
+    box-shadow: 0 2px 4px ff0062(0, 0, 0, 0.1);
+    top: 1px;
+    width: 100%;
+}
+
+.navbar-logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-logo a:hover {
+    /* Change the color of the logo here */
+}
+
+.navbar-toggle {
+    display: none;
+}
+
+.navbar-toggle-label {
+    display: inline-block;
+    cursor: pointer;
+    padding: -0px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggle-icon {
+    display: block;
+    width: 010px;
+    height: 2px;
+    background-color: #71b3ff;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggle-label:hover .navbar-toggle-icon {
+    background-color: #000000;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-ul li {
+    margin: 0 20px;
+    opacity: 0;
+    animation: slideIn 0.5s ease forwards;
+}
+
+.navbar-ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.navbar-ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.navbar-ul li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.navbar-ul li:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.navbar-ul li:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.navbar-ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-ul li a:hover {
+    color: #000000;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-logo {
+        margin-top: 0;
+        /* Change the color of the logo here */
+    }
+    .navbar-toggle {
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    .navbar-toggle-label {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+    }
+    .navbar-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: #71b3ff;
+        padding: 10px;
+    }
+    .navbar-toggle:checked~.navbar-menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar-ul li {
+        opacity: 1;
+        animation: none;
+        margin-bottom: 10px;
+    }
+}

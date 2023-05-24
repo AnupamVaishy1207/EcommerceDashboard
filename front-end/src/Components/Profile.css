@@ -1,0 +1,40 @@
+.profile-container {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 700px;
+}
+
+.profile-info {
+    margin-bottom: 400px;
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+}
+
+.profile-logout {
+    margin-top: 20px;
+}
+
+.profile-logout button {
+    padding: 10px 20px;
+    background-color: #71b3ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.profile-logout button:hover {
+    background-color: #5ea9ff;
+}
